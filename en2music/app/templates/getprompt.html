@@ -1,0 +1,21 @@
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>begin</title>
+ </head>
+    <body>
+       <form action = "http://localhost/api/app/generate" method = "POST">
+          <p><h3>请输入生成信息</h3></p>
+          <p>Prompt<input type = 'text' name = 'prompt'/></p>
+          <p>纯音乐<input type="radio" id="yes" name="make_instrumental" value="true">
+                <label for="yes">Yes</label>
+                <br>
+                <input type="radio" id="no" name="make_instrumental" value="false">
+                <label for="no">No</label>
+                <br></p>
+          <p>标签<input type = 'text' name = 'tags'/></p>
+          <p>长度<input type = 'number' name = 'length'/></p>
+          <p><input type = 'submit' value = '生成'/></p>
+       </form>
+    </body>
+ </html>

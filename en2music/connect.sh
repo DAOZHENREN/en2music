@@ -1,0 +1,1 @@
+ssh -o PubkeyAcceptedKeyTypes=+ssh-rsa -o HostKeyAlgorithms=+ssh-rsa -p 10022 dongjintao@system-jumpserver.4paradigm.com

@@ -1,0 +1,17 @@
+FROM harbor-contest.4pd.io/dongjintao/env:2.0
+ENV http_proxy=http://10.100.116.197:7899
+ENV https_proxy=http://10.100.116.197:7897
+RUN apt-get update && apt-get install -y python3-pip
+COPY ./requirements.txt /workspace/requirements.txt
+RUN pip install \
+    --no-cache-dir \
+    -U \
+    -r /workspace/requirements.txt
+
+COPY ./app /workspace/app
+ADD . /workspace
+WORKDIR /workspace
+ENV http_proxy=
+ENV https_proxy=
+EXPOSE 80
+CMD [/bin/bash, python3 /workspaceapp/start.py]
